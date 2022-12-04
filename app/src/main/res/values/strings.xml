@@ -3,4 +3,5 @@
     <string name="shuffle_btn">Shuffle</string>
     <string name="favourites_btn">Favourites</string>
     <string name="playlists_btn">Playlists</string>
+    <string name="total_songs">Total songs</string>
 </resources>

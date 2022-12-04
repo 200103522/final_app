@@ -22,7 +22,10 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:contentDescription="@string/shuffle_btn"
-                android:drawableTop="@drawable/shuffle_icon" />
+                android:drawableTop="@drawable/shuffle_icon"
+                android:text="@string/shuffle_btn"
+                android:textColor="@color/black"
+                android:textAllCaps="false"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -30,7 +33,10 @@
                 android:layout_weight="1"
                 android:contentDescription="@string/favourites_btn"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:drawableTop="@drawable/favourite_icon"/>
+                android:drawableTop="@drawable/favourite_icon"
+                android:text="@string/favourites_btn"
+                android:textColor="@color/black"
+                android:textAllCaps="false"/>
 
             <Button
                 android:layout_width="wrap_content"
@@ -38,9 +44,23 @@
                 android:layout_weight="1"
                 android:contentDescription="@string/playlists_btn"
                 style="@style/Widget.AppCompat.Button.Borderless"
-                android:drawableTop="@drawable/playlists_icon"/>
+                android:drawableTop="@drawable/playlists_icon"
+                android:text="@string/playlists_btn"
+                android:textColor="@color/black"
+                android:textAllCaps="false"/>
 
         </LinearLayout>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/total_songs"
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
     </LinearLayout>
 
