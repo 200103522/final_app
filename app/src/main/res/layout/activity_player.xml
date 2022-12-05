@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_weight="1">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -30,7 +31,8 @@
             android:text="@string/world_of_music"
             android:textSize="20sp"
             android:gravity="center"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
         
         <ImageButton
             android:layout_width="wrap_content"
@@ -60,14 +62,16 @@
         android:text="@string/song_name"
         android:textSize="18sp"
         android:textColor="@color/black"
-        android:textAlignment="center"/>
+        android:gravity="center"
+        android:layout_weight="1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="10dp"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_weight="1">
         <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,22 +99,77 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="25dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/black"
-            android:textSize="15dp"/>
+            android:textSize="15dp"
+            android:text="@string/start_tv"
+            android:gravity="center"/>
 
-
-
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textColor="@color/black"
-            android:textSize="15dp"/>
+            android:textSize="15dp"
+            android:text="@string/end_tv"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/repeat_icon"
+            android:background="@android:color/transparent"
+            android:tint="#333E3E"
+            android:contentDescription="@string/repeat_btn"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/equalizer_icon"
+            android:background="@android:color/transparent"
+            android:tint="#333E3E"
+            android:contentDescription="@string/equalizer_btn"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/timer_icon"
+            android:background="@android:color/transparent"
+            android:tint="#333E3E"
+            android:contentDescription="@string/timer_btn"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_icon"
+            android:background="@android:color/transparent"
+            android:tint="#333E3E"
+            android:contentDescription="@string/share_btn"
+            android:layout_weight="1"/>
+
+
     </LinearLayout>
 
 </LinearLayout>
