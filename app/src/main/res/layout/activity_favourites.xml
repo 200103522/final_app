@@ -21,7 +21,7 @@
             android:src="@drawable/back_icon"
             android:contentDescription="@string/back_btn"
             android:backgroundTint="@android:color/transparent"
-            android:tint="@color/white"/>
+            app:tint="@color/white"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -42,9 +42,13 @@
         app:icon="@drawable/shuffle_icon"
         app:iconSize="35dp"
         app:iconTint="#C51C39"
-        tools:layout_editor_absoluteX="310dp"
-        tools:layout_editor_absoluteY="617dp"
+        app:strokeColor="#C51C39"
         app:strokeWidth="2dp"
-        app:strokeColor="#C51C39"/>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

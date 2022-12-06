@@ -15,18 +15,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.shuffleBtn.setOnClickListener {
-            val intent = Intent(this@MainActivity, PlayerActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this@MainActivity, PlayerActivity::class.java))
         }
 
         binding.favouritesBtn.setOnClickListener {
-            val intent = Intent(this@MainActivity, FavouritesActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this@MainActivity, FavouritesActivity::class.java))
         }
 
         binding.playlistBtn.setOnClickListener {
-            val intent = Intent(this@MainActivity, PlaylistActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this@MainActivity, PlaylistActivity::class.java))
         }
 
     }
