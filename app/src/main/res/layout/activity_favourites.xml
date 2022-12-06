@@ -6,4 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".FavouritesActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#C51C39">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:src="@drawable/back_icon"
+            android:contentDescription="@string/back_btn"
+            android:backgroundTint="@android:color/transparent"
+            android:tint="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/favourites_btn"
+            android:gravity="center"
+            android:text="@string/favourites_btn"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/white"
+        app:icon="@drawable/shuffle_icon"
+        app:iconSize="35dp"
+        app:iconTint="#C51C39"
+        tools:layout_editor_absoluteX="310dp"
+        tools:layout_editor_absoluteY="617dp"
+        app:strokeWidth="2dp"
+        app:strokeColor="#C51C39"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
