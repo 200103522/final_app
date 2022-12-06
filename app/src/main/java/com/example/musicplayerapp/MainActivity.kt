@@ -1,5 +1,6 @@
 package com.example.musicplayerapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -17,5 +18,10 @@ class MainActivity : AppCompatActivity() {
         binding.shuffleBtn.setOnClickListener {
             Toast.makeText(this@MainActivity, "Button Clicked", Toast.LENGTH_SHORT).show()
         }
+
+        binding.favouritesBtn.setOnClickListener {
+            val intent = Intent(this, FavouritesActivity::class.java)
+        }
+
     }
 }
