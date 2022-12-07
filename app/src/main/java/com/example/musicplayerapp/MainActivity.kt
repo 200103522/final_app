@@ -3,7 +3,9 @@ package com.example.musicplayerapp
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.musicplayerapp.databinding.ActivityMainBinding
@@ -11,12 +13,18 @@ import com.example.musicplayerapp.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestRuntimePermission()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        toggle = ActionBarDrawerToggle(this, binding.root, R.string.open, R.string.close)
+        binding.root.addDrawerListener(toggle)
+        toggle.syncState()
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.shuffleBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, PlayerActivity::class.java))
@@ -49,4 +57,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (toggle.onOptionsItemSelected(item))
+            return true
+        return super.onOptionsItemSelected(item)
+    }
 }
