@@ -9,6 +9,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.musicplayerapp.databinding.ActivityMainBinding
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,6 +37,17 @@ class MainActivity : AppCompatActivity() {
 
         binding.playlistBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, PlaylistActivity::class.java))
+        }
+
+        binding.navView.setNavigationItemSelectedListener() {
+            when(it.itemId)
+            {
+                R.id.navFeedback ->Toast.makeText(baseContext, "Feedback", Toast.LENGTH_SHORT).show()
+                R.id.navSetting ->Toast.makeText(baseContext, "Settings", Toast.LENGTH_SHORT).show()
+                R.id.navAbout ->Toast.makeText(baseContext, "About", Toast.LENGTH_SHORT).show()
+                R.id.navExit -> exitProcess(1)
+            }
+            true
         }
 
     }
